@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Frosh IMs
+{% endblock %}
+
+{% block body %}
+<header style="font-size: large; text-align: center">
+<h1>Register for Frosh IMs</h1>
+<form action="{{ url_for('register') }}" method="post">
+    <header style="font-size: large; text-align: center">
+    <p>
+        Name: <input name="name" type="text"/>
+    </p>
+    <br>
+    <header style="font-size: large; text-align: center">
+    <p>
+        Continent:
+        <select name="continent">
+            <option value=""></option>
+            <option value="Asia">Asia</option>
+            <option value="Africa">Africa</option>
+            <option value="North America">North America</option>
+            <option value="South America">South America</option>
+            <option value="Europe">Europe</option>
+            <option value="Australia">Australia</option>
+        </select>
+    </p>
+    <br>
+    <header style="font-size: large; text-align: center">
+    <p>
+        Gmail: <input name="email" type="text"/>
+    </p>
+    <br>
+    <header style="font-size: large; text-align: center">
+    <p>
+        Phone: <input name="phone" type="text"/>
+    </p>
+    <br>
+    <header style="font-size: large; text-align: center">
+    <input type="submit" value="Register">
+</form>
+{% endblock %}
